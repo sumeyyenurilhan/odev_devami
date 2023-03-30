@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Sayfa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="hero">
+        <header class="header">
+            <nav class="nav">
+                <a href="home.html"><img src="images/logo.png" class="logo"></a>
+                <ul>
+                    <li><a href="home.html" class="active">Ana Sayfa</a></li>
+                    <li><a href="about.html">Hakkımızda</a></li>
+                    <li><a href="travels.html">Seyahatler</a></li>
+                    <li><a href="contact.html">İletişim</a></li>
+                </ul>
+                <img src="images/moon.png" id="icon">
+            </nav>
+            <script>
+                var icon = document.getElementById("icon");
+                icon.onclick = function() {
+                    document.body.classList.toggle("dark-theme");
+                    if (document.body.classList.contains("dark-theme")) {
+                        icon.src = "images/sun.png";
+                    } else {
+                        icon.src = "images/moon.png";
+                    }
+                };
+            </script>
+            <div class="home">
+                <div class="home-box">
+                    <video src="images/tacmahal.mp4" muted autoplay loop class="slider active"></video>
+                    <img src="images/gemi.jpg" class="slider">
+                    <video src="images/ucak.mp4" muted autoplay loop class="slider"></video>
+                    <div class="content active">
+                        <h1>Hindistan Ziyaretimiz Yakında...</h1>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+                            to using 'Content here, content here', making it look like readable English.</p>
+                        <a href="#" class="btn">İncele</a>
+                    </div>
+                    <div class="content">
+                        <h1>Okyanus Seyahatlerimiz</h1>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+                            to using 'Content here, content here', making it look like readable English.</p>
+                        <a href="#" class="btn">İncele</a>
+                    </div>
+                    <div class="content">
+                        <h1>Kaliteli Ulaşım Hizmeti</h1>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+                            to using 'Content here, content here', making it look like readable English.</p>
+                    </div>
+                </div>
+                <div class="slider-navigation">
+                    <div class="nav-btn"></div>
+                    <div class="nav-btn"></div>
+                    <div class="nav-btn"></div>
+                </div>
+                <script>
+                    const btns = document.querySelectorAll('.nav-btn');
+                    const slides = document.querySelectorAll('.slider');
+                    const contents = document.querySelectorAll('.content');
+                    var sliderNav = function(index) {
+                        btns.forEach((btn) => {
+                            btn.classList.remove('active');
+                        });
+                        slides.forEach((slide) => {
+                            slide.classList.remove('active');
+                        });
+                        contents.forEach((content) => {
+                            content.classList.remove('active');
+                        });
+                        btns[index].classList.add('active');
+                        slides[index].classList.add('active');
+                        contents[index].classList.add('active');
+                    }
+                    btns.forEach((btn, i) => {
+                        btn.addEventListener('click', () => {
+                            sliderNav(i);
+                        });
+                    });
+                </script>
+            </div>
+        </header>
+        <div class="class">
+            <section class="seasons" style="background-image: url(images/yaprak.png); 
+            background-repeat: no-repeat; height: 40rem; width: 100%; align-items: center; background-size: 70rem; background-position: center;">
+                <h1 class="heading"><span>Mevsim Turları</span></h1>
+                <div class="seasons-box" style="margin-top: 6rem; align-items: center; padding: 0 20rem;">
+                    <div class="season">
+                        <div class="season-box">
+                            <h2>Yaz Turları</h2>
+                            <img src="images/fas.jpg">
+                            <a href=""><input type='submit' value='İncele' name='see' class='btn'></a>
+                        </div>
+                    </div>
+                    <div class="season">
+                        <div class="season-box">
+                            <h2>Bahar Turları</h2>
+                            <img src="images/cinbaharı.jpg">
+                            <a href=""><input type='submit' value='İncele' name='see' class='btn'></a>
+                        </div>
+                    </div>
+                    <div class="season">
+                        <div class="season-box">
+                            <h2>Kış Turları</h2>
+                            <img src="images/norvec.jpg">
+                            <a href=""><input type='submit' value='İncele' name='see' class='btn'></a>
+                        </div>
+                    </div>
+                </div>
+            </section><br><br>
+            <hr class="hr"><br><br>
+            <section class="news">
+                <h1 class="heading"><span>Gezi Günlüğü</span></h1>
+                <div class="container">
+                    <div class="box">
+                        <img class="icon" src="images/norveç.jpg">
+                        <h3>Norveç Turumuz</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis sodales ex.</p>
+                    </div>
+                    <div class="box">
+                        <img class="icon" src="images/uludag.jpg">
+                        <h3>Uludağ'da Sucuk Ekmek</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis sodales ex.</p>
+                    </div>
+                    <div class="box">
+                        <img class="icon" src="images/safar.jpg">
+                        <h3>Safari'deki Maceralarımız</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis sodales ex.</p>
+                    </div>
+                    <div class="box">
+                        <img class="icon" src="images/kapadokya.jpg">
+                        <h3>Kapadokya Seyahati</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis sodales ex.</p>
+                    </div>
+                    <div class="box">
+                        <img class="icon" src="images/cay.jpg">
+                        <h3>Karadeniz'de Çay Keyfi</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis sodales ex.</p>
+                    </div>
+                    <div class="box">
+                        <img class="icon" src="images/niagara.jpg">
+                        <h3>Niagara Şelalesi</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis sodales ex.</p>
+                    </div>
+                </div>
+            </section><br><br>
+            <hr class="hr"><br><br>
+            <section class="works">
+                <h1 class="heading"><span>Seyahatlerimiz</span></h1>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class='swiper-slide'>
+                            <h2>Avrupa Turu</h2>
+                            <img src="images/almanya.jpg" id="zoom">
+                            <a href='portfolio.php'><input type='submit' value='İncele' name='see' class='btn'></a>
+                        </div>
+                        <div class='swiper-slide'>
+                            <h2>Uzak Doğu Turu</h2>
+                            <img src="images/japonya.jpg" id="zoom">
+                            <a href='portfolio.php'><input type='submit' value='İncele' name='see' class='btn'></a>
+                        </div>
+                        <div class='swiper-slide'>
+                            <h2>Mevsim Turları</h2>
+                            <img src="images/fas.jpg" id="zoom">
+                            <a href='portfolio.php'><input type='submit' value='İncele' name='see' class='btn'></a>
+                        </div>
+                        <div class='swiper-slide'>
+                            <h2>Amerika Turu</h2>
+                            <img src="images/peru.jpg" id="zoom">
+                            <a href='portfolio.php'><input type='submit' value='İncele' name='see' class='btn'></a>
+                        </div>
+                        <div class='swiper-slide'>
+                            <h2>Rusya Turu</h2>
+                            <img src="images/russia.jpg" id="zoom">
+                            <a href=""><input type='submit' value='İncele' name='see' class='btn'></a>
+                        </div>
+                        <div class='swiper-slide'>
+                            <h2>Yurt İçi Turları</h2>
+                            <img src="images/istanbul.jpg" id="zoom">
+                            <a href=""><input type='submit' value='İncele' name='see' class='btn'></a>
+                        </div>
+                        <div class='swiper-slide'>
+                            <h2>Doğu Ekspress Seyahat</h2>
+                            <img src="images/doğu.jpg" id="zoom">
+                            <a href=""><input type='submit' value='İncele' name='see' class='btn'></a>
+                        </div>
+                        <div class='swiper-slide'>
+                            <h2>Avustralya Turu</h2>
+                            <img src="images/sidney.jpg" id="zoom">
+                            <a href=""><input type='submit' value='İncele' name='see' class='btn'></a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+                <script>
+                    var swiper = new Swiper(".mySwiper", {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                        freeMode: true,
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: false,
+                        },
+                        breakpoints: {
+                            0: {
+                                slidesPerView: 1,
+                            },
+                            520: {
+                                slidesPerView: 2,
+                            },
+                            950: {
+                                slidesPerView: 3,
+                            },
+                        },
+                    });
+                </script>
+            </section>
+        </div>
+        <section class="back" style="background-image:url(images/avustralia.jpg)" ; no-repeat>
+            <h3 class="heading"><span style="color: white">AVUSTRALYA TURU İÇİN REZERVASYON</span></h3>
+            <div class="sayim">
+                <div>
+                    <p id="days">00</p>
+                    <span>Gün</span>
+                </div>
+                <div>
+                    <p id="hours">00</p>
+                    <span>Saat</span>
+                </div>
+                <div>
+                    <p id="minutes">00</p>
+                    <span>Dakika</span>
+                </div>
+                <div>
+                    <p id="seconds">00</p>
+                    <span>Saniye</span>
+                </div>
+            </div>
+            <a href="#" class="btn">İncele</a>
+            <script>
+                var countDownDate = new Date("July 10, 2023 00:00:00").getTime();
+                var x = setInterval(function() {
+                    var now = new Date().getTime();
+                    var distance = countDownDate - now;
+
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    document.getElementById("days").innerHTML = days;
+                    document.getElementById("hours").innerHTML = hours;
+                    document.getElementById("minutes").innerHTML = minutes;
+                    document.getElementById("seconds").innerHTML = seconds;
+
+                    if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById("days").innerHTML = "00";
+                        document.getElementById("hours").innerHTML = "00";
+                        document.getElementById("minutes").innerHTML = "00";
+                        document.getElementById("seconds").innerHTML = "00";
+                    }
+
+                }, 1000);
+            </script>
+        </section>
+        <footer>
+            <div class="container">
+                <ul class="ek">
+                    <h3>hazır linkler</h3>
+                    <li><a href="home.php">Ana Sayfa</a></li>
+                    <li><a href="about.php">Hakkımızda</a></li>
+                    <li><a href="travels.php">Seyahatlerimiz</a></li>
+                    <li><a href="contact.php">İletişim</a></li>
+                </ul>
+                <ul class="ek">
+                    <h3>Seyahatler</h3>
+                    <li><a href="home.php">Yurt İçi Turlar</a></li>
+                    <li><a href="about.php">Yurt Dışı Turlar</a></li>
+                    <li><a href="travels.php">Mevsim Turları</a></li>
+                    <li><a href="contact.php">Gemi Turları</a></li>
+                </ul>
+                <ul class="ek">
+                    <h3>İletişim bilgileri</h3>
+                    <li>
+                        <a href="#"> <i class="fas fa-phone" style="margin: 1rem;"></i>+0213-589-74-10</a>
+                    </li>
+                    <li>
+                        <a href="#" style="text-transform:none;"> <i class="fas fa-envelope" style="margin: 1rem;"></i>asilturizm@gmail.com</a>
+                    </li>
+                </ul>
+                <ul class="social_icon">
+                    <h3>Sosyal Medya</h3>
+                    <li>
+                        <a href="#" class="fab fa-facebook-f"></a>
+
+                        <a href="#" class="fab fa-instagram"></a>
+
+                        <a href="#" class="fab fa-twitter"></a>
+
+                        <a href="#" class="fab fa-youtube"></a>
+                    </li>
+                </ul>
+
+            </div>
+            <hr class="hr">
+            <p>Mezuniyet Projesi | 2023</p>
+        </footer>
+    </div>
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
