@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
  :root {
-    --primary-color: white;
-    --secondary-color: #00262a;
+    --primary-color: #eee;
+    --secondary-color: #000;
     --border-bg: #9b1276;
-    --light-bg: #dd98f1;
+    --light-bg: #89c7bf;
     --border-bold: #00262a;
-    --border-light: #13ffd8;
+    --border-light: #89c7bf;
 }
 
 .dark-theme {
-    --primary-color: #00262a;
-    --secondary-color: white;
-    --border-bold: #13ffa4;
+    --primary-color: #000;
+    --secondary-color: #eee;
+    --border-bold: #89c7bf;
     --border-light: #00262a;
 }
 
@@ -23,6 +23,7 @@
     outline: none;
     text-transform: capitalize;
     text-decoration: none;
+    --scroll-behavior: smooth;
 }
 
 *::selection {
@@ -35,17 +36,17 @@
 }
 
 *::-webkit-scrollbar-track {
-    background-color: var(--border-light);
+    background-color: var(--primary-color);
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: var(--secondary-color);
+    background-color: var(--border-light);
 }
 
 .hero {
     width: 100%;
     background-color: var(--primary-color);
-    min-height: 500vh;
+    min-height: 100vh;
 }
 
 .hero header {
@@ -65,7 +66,7 @@
     align-items: center;
     justify-content: space-between;
     height: 8rem;
-    background-color: var(--primary-color);
+    background-color: var(--border-light);
 }
 
 .hero .header .logo {
@@ -229,6 +230,12 @@ nav ul li a.active {
     transform: scale(1.3);
 }
 
+.hr {
+    height: 0.25rem;
+    background: var(--secondary-color);
+    border: none;
+}
+
 .class {
     overflow: hidden !important;
     margin: 0 auto;
@@ -239,29 +246,31 @@ nav ul li a.active {
 .seasons {
     margin-top: 6rem;
     width: 100%;
-    height: 50rem;
+    min-height: 45rem;
 }
 
 .seasons .seasons-box {
     width: 100%;
     display: flex;
+    margin-top: 3rem;
     justify-content: space-between;
 }
 
 .seasons .season .season-box {
-    width: 10rem;
+    width: 25rem;
     text-align: center;
     border: var(--border-bold);
 }
 
 .seasons .season .season-box h2 {
     display: block;
-    color: var(--border-bg);
+    font-size: 2rem;
+    color: var(--border-bold);
 }
 
 .seasons .season .season-box img {
-    width: 10rem;
-    height: 10rem;
+    width: 20rem;
+    height: 20rem;
     object-fit: cover;
     border: var(--secondary-color);
     border-style: solid;
@@ -273,7 +282,7 @@ nav ul li a.active {
     display: inline-block;
     padding: 1rem 3rem;
     background: none;
-    background-color: none;
+    background-color: var(--light-bg);
     color: var(--border-bg);
     font-size: 1.5rem;
     border: none;
@@ -297,7 +306,6 @@ nav ul li a.active {
 
 .news {
     margin-top: 1rem;
-    margin-left: 1rem;
 }
 
 .news .container {
@@ -312,12 +320,16 @@ nav ul li a.active {
     height: 30rem;
     width: 20rem;
     margin: 1rem;
+    margin-top: 3rem;
+    margin-left: 4rem;
     border: var(--border-bold);
     border-style: solid;
     border-width: medium;
     border-top-right-radius: 20%;
     border-bottom-left-radius: 20%;
     background-color: var(--secondary-color);
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .news .container .box .icon {
@@ -343,7 +355,7 @@ nav ul li a.active {
 }
 
 .works {
-    margin-top: 1rem;
+    margin-top: 7rem;
 }
 
 .works .swiper {
@@ -373,7 +385,7 @@ nav ul li a.active {
 }
 
 .works .swiper .swiper-slide h2 {
-    color: var(--border-bg);
+    color: var(--border-bold);
     font-size: 1.7rem;
     margin: 2rem;
 }
@@ -394,19 +406,12 @@ nav ul li a.active {
     transition: all 1s ease;
 }
 
-.works .swiper .swiper-slide img #id:hover {
-    -moz-transform: scale(1.5);
-    -o-transform: scale(1.5);
-    transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-}
-
 .swiper-pagination {
     color: var(--light-bg);
 }
 
 .back {
+    background-image: url(../images/australia.jpg);
     background-position: center !important;
     background-size: cover !important;
     background-attachment: fixed;
@@ -419,14 +424,14 @@ nav ul li a.active {
     margin-bottom: 2rem;
     align-items: center;
     justify-content: center;
+    margin-bottom: 4rem;
 }
 
 .back .btn {
     box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.9);
-    display: inline-block;
+    display: block;
     padding: 1rem 3rem;
     color: white;
-    background-color: none;
     font-size: 2rem;
     border-width: medium;
     border-radius: 2px;
@@ -463,10 +468,11 @@ nav ul li a.active {
 footer {
     position: absolute;
     width: 100%;
-    background-color: #00262a;
+    background-color: var(--border-light);
     padding: 3rem;
+    padding-bottom: 1rem;
     display: row;
-    grid-template-rows: minmax(10rem, 1rem)
+    grid-template-rows: minmax(auto, 1rem)
 }
 
 footer .container {
@@ -492,67 +498,349 @@ footer .container .social_icon {
     text-align: center;
 }
 
-footer .container .social_icon li {
-    display: flex;
+footer .container .social_icon div {
+    display: block;
     margin-top: 3rem;
     align-items: center;
-    justify-content: center;
 }
 
-footer .container .social_icon li,
-footer .container .ek li {
+footer .container .social_icon div,
+footer .container .ek div {
     list-style: none;
     text-decoration: none;
     transition: 0.5s ease;
 }
 
-footer .container .social_icon li,
-footer .container .ek li:hover {
+footer .container #ek div:hover {
     transform: translateY(-1rem);
     color: var(--light-bg);
 }
 
-footer .container .social_icon li a,
-footer .container .ek li a {
+footer .container .social_icon div a,
+footer .container .ek div a {
     font-size: 1.5rem;
-    color: white;
-    margin: 1rem 2rem;
+    color: var(--secondary-color);
+    margin: 1rem 0;
     display: inline-block;
-    transition: 0.5s ease;
     text-decoration: none;
     list-style: none;
 }
 
-footer .container .social_icon li a:hover {
-    transform: translateY(-1rem);
-    color: var(--light-bg);
+footer .container .social_icon div a {
+    transition: 0.5s ease;
 }
 
-footer .container .social_icon h3,
+footer .container .social_icon div a:hover {
+    transform: translateY(-1rem);
+    color: var(--border-bold);
+    transition: 0.5s ease;
+}
+
+footer .container h3,
 footer .container .ek h3 {
     color: var(--border-bg);
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-footer .container .li a i {
-    color: gray;
-    margin: 1rem;
+footer .container div a i {
+    color: var(--border-bold);
     transition: 2s linear;
-    padding: 1rem;
-}
-
-footer .container .li a:hover i {
-    padding-right: 5rem;
-}
-
-footer .hr {
-    color: white;
-    size: 1rem;
+    padding: 2rem;
 }
 
 footer p {
-    color: white;
+    color: var(--secondary-color);
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
+}
+
+.high {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url(../images/giraffe.jpg);
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.about {
+    width: 100%;
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 20rem auto;
+}
+
+.about .article {
+    grid-gap: 1rem;
+    margin: 0 3rem;
+    width: 100%;
+}
+
+.about .article div a {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-bg);
+    font-size: 2rem;
+    margin: 2rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.about .article div a:hover {
+    color: var(--border-bg);
+}
+
+.about .article div a.active {
+    color: var(--border-bg);
+}
+
+.about .article1 {
+    margin: 2rem;
+    grid-gap: 1rem;
+}
+
+.about .article1 p {
+    resize: none;
+    color: white;
+    font-size: 1.25rem;
+    margin: 3rem;
+    text-align: justify;
+    height: 35rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-indent: 1.5rem;
+    --scroll-behavior: smooth;
+    padding: 1rem;
+}
+
+.high1 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url(../images/bird.jpg);
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.class1 {
+    overflow: hidden !important;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 70rem;
+    align-items: center;
+}
+
+.about {
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    min-height: 52rem;
+    margin-top: 13rem;
+    background: #00262ac2;
+    position: center;
+    margin-left: 18rem;
+    --webkit-backdrop-filter: blur(10rem);
+    --backdrop-filter: blur(10rem);
+}
+
+.contact {
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    min-height: 52rem;
+    margin-top: 13rem;
+    background: #00262ac2;
+    position: center;
+    margin-left: 30rem;
+    --webkit-backdrop-filter: blur(10rem);
+    --backdrop-filter: blur(10rem);
+}
+
+.contact form {
+    max-width: 45rem;
+    margin: 0 auto;
+    background: none;
+    background-color: none;
+}
+
+.contact form .btn1 {
+    box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.99);
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: none;
+    background-color: var(--light-bg);
+    color: var(--border-bg);
+    font-size: 1.5rem;
+    border: none;
+    margin-left: 15rem;
+}
+
+.contact form .btn1:hover {
+    background-color: var(--border-bg);
+    color: var(--primary-color);
+}
+
+.contact form .box {
+    width: 100%;
+    padding: 1.3rem;
+    font-size: 2rem;
+    text-transform: none;
+    border: none;
+    margin: 1rem 0;
+    background-color: none;
+    background: none;
+}
+
+.contact form .box::-webkit-input-placeholder {
+    color: var(--light-bg);
+    opacity: 0.5;
+}
+
+.contact form .box:hover {
+    background-color: none;
+    background: none;
+    color: var(--border-bg);
+}
+
+.hr1 {
+    height: 0.25rem;
+    background: var(--primary-color);
+    border: none;
+}
+
+.contact form .textarea {
+    height: 3rem;
+    resize: none;
+}
+
+.high2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url(../images/ticket.jpg);
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.class1 .find {
+    margin-top: 12rem;
+    margin-bottom: 3rem;
+    border-style: none;
+    height: 4rem;
+    width: 30rem;
+    align-self: center;
+    display: flex;
+    margin-left: 45rem;
+}
+
+.class1 .find form {
+    background: #00262ac2;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.class1 .find form:hover {
+    background-color: var(--border-light);
+}
+
+.class1 .find form input {
+    background: none;
+    background-color: none;
+    color: var(--border-bg);
+    border: none;
+    height: 3rem;
+    width: 20rem;
+    font-size: 1.5rem;
+    margin: 0.30rem;
+    margin-left: 2rem;
+}
+
+.class1 .find form input::-webkit-input-placeholder {
+    color: white;
+}
+
+.class1 .find a {
+    background: #00262ac2;
+    width: 5rem;
+    width: 4rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.class1 .find a:hover {
+    background-color: var(--secondary-color);
+}
+
+.class1 .find a i {
+    color: var(--border-bg);
+    font-size: 2rem;
+    margin-top: 0.75rem;
+    margin-left: 0.5rem;
+    display: block;
+}
+
+.travels {
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    min-height: 52rem;
+    margin-bottom: 5rem;
+    background: #00262ac2;
+    position: center;
+    margin-left: 18rem;
+    --webkit-backdrop-filter: blur(10rem);
+    --backdrop-filter: blur(10rem);
+}
+
+.travels .container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 3rem;
+    padding: 2rem;
+}
+
+.travels .container .travel {
+    min-height: 38rem;
+    border-bottom: var(--border-light);
+    border-style: solid;
+    border-width: medium;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 3rem;
+    align-items: center;
+    justify-content: center;
+    position: center;
+}
+
+.travels .container .travel h2 {
+    display: block;
+    font-size: 2.20rem;
+    color: var(--border-bg);
+    text-align: center;
+    min-height: 7rem;
+}
+
+.travels .container .travel img {
+    width: 22rem;
+    height: 22rem;
+    object-fit: cover;
+    border: var(--secondary-color);
+    border-style: solid;
+    border-width: medium;
+    margin-left: 0.75rem;
+}
+
+.travels .container .travel a {
+    align-items: center;
+    margin-left: 6.75rem;
 }
