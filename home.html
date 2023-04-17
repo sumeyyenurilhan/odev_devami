@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="lib/js/jquery.min.js"></script>
     <script src="lib/js/bootstrap.min.js"></script>
 </head>
@@ -18,14 +19,14 @@
     <div class="hero">
         <header class="header">
             <nav class="nav">
-                <a href="home.html"><img src="images/logo.png" class="logo"></a>
+                <a href="home.html" aria-label="home"><img src="images/logo.png" class="logo" alt=""></a>
                 <ul>
                     <li><a href="home.html" class="active">Ana Sayfa</a></li>
-                    <li><a href="about.html">Hakkımızda</a></li>
+                    <li><a href="about1.html">Hakkımızda</a></li>
                     <li><a href="travels.html">Seyahatler</a></li>
                     <li><a href="contact.html">İletişim</a></li>
                 </ul>
-                <img src="images/moon.png" id="icon">
+                <img src="images/moon.png" id="icon" alt="">
             </nav>
             <script>
                 var icon = document.getElementById("icon");
@@ -41,21 +42,21 @@
             <div class="home">
                 <div class="home-box">
                     <video src="images/tacmahal.mp4" muted autoplay loop class="slider active"></video>
-                    <img src="images/gemi.jpg" class="slider">
+                    <img src="images/gemi.jpg" class="slider" alt="">
                     <video src="images/ucak.mp4" muted autoplay loop class="slider"></video>
-                    <div class="content active">
+                    <div class="content active" data-aos="fade-up">
                         <h1>Hindistan Ziyaretimiz Yakında...</h1>
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
                             to using 'Content here, content here', making it look like readable English.</p>
                         <a href="#" class="btn">İncele</a>
                     </div>
-                    <div class="content">
+                    <div class="content" data-aos="fade-up">
                         <h1>Okyanus Seyahatlerimiz</h1>
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
                             to using 'Content here, content here', making it look like readable English.</p>
                         <a href="#" class="btn">İncele</a>
                     </div>
-                    <div class="content">
+                    <div class="content" data-aos="fade-up">
                         <h1>Kaliteli Ulaşım Hizmeti</h1>
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
                             to using 'Content here, content here', making it look like readable English.</p>
@@ -93,112 +94,115 @@
             </div>
         </header>
         <div class="class">
-            <section class="seasons" style="background-image: url(images/yaprak.png); 
-            background-repeat: no-repeat; height: 40rem; width: 100%; align-items: center; background-size: 70rem; background-position: center;">
-                <h1 class="heading"><span>Mevsim Turları</span></h1>
-                <div class="seasons-box" style="margin-top: 6rem; align-items: center; padding: 0 20rem;">
+            <section class="seasons">
+                <h1 class="heading"><span>Mevsim Turları</span>
+                    <hr class="hr">
+                </h1>
+                <div class="seasons-box" data-aos="fade-up">
                     <div class="season">
                         <div class="season-box">
                             <h2>Yaz Turları</h2>
-                            <img src="images/fas.jpg">
+                            <img src="images/fas.jpg" alt="">
                             <a href=""><input type='submit' value='İncele' name='see' class='btn'></a>
                         </div>
                     </div>
                     <div class="season">
                         <div class="season-box">
                             <h2>Bahar Turları</h2>
-                            <img src="images/cinbaharı.jpg">
+                            <img src="images/cinbaharı.jpg" alt="">
                             <a href=""><input type='submit' value='İncele' name='see' class='btn'></a>
                         </div>
                     </div>
                     <div class="season">
                         <div class="season-box">
                             <h2>Kış Turları</h2>
-                            <img src="images/norvec.jpg">
+                            <img src="images/norvec.jpg" alt="">
                             <a href=""><input type='submit' value='İncele' name='see' class='btn'></a>
                         </div>
                     </div>
                 </div>
             </section><br><br>
-            <hr class="hr"><br><br>
             <section class="news">
-                <h1 class="heading"><span>Gezi Günlüğü</span></h1>
-                <div class="container">
+                <h1 class="heading"><span>Gezi Günlüğü</span>
+                    <hr class="hr">
+                </h1>
+                <div class="container" data-aos="fade-up">
                     <div class="box">
-                        <img class="icon" src="images/norveç.jpg">
+                        <img class="icon" src="images/norveç.jpg" alt="">
                         <h3>Norveç Turumuz</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis sodales ex.</p>
                     </div>
                     <div class="box">
-                        <img class="icon" src="images/uludag.jpg">
-                        <h3>Uludağ'da Sucuk Ekmek</h3>
+                        <img class="icon" src="images/uludag.jpg" alt="">
+                        <h3>Uludağ'da Kestane</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis sodales ex.</p>
                     </div>
                     <div class="box">
-                        <img class="icon" src="images/safar.jpg">
+                        <img class="icon" src="images/safar.jpg" alt="">
                         <h3>Safari'deki Maceralarımız</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis sodales ex.</p>
                     </div>
                     <div class="box">
-                        <img class="icon" src="images/kapadokya.jpg">
+                        <img class="icon" src="images/kapadokya.jpg" alt="">
                         <h3>Kapadokya Seyahati</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis sodales ex.</p>
                     </div>
                     <div class="box">
-                        <img class="icon" src="images/cay.jpg">
+                        <img class="icon" src="images/cay.jpg" alt="">
                         <h3>Karadeniz'de Çay Keyfi</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis sodales ex.</p>
                     </div>
                     <div class="box">
-                        <img class="icon" src="images/niagara.jpg">
+                        <img class="icon" src="images/niagara.jpg" alt="">
                         <h3>Niagara Şelalesi</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis sodales ex.</p>
                     </div>
                 </div>
             </section><br><br>
-            <hr class="hr"><br><br>
             <section class="works">
-                <h1 class="heading"><span>Seyahatlerimiz</span></h1>
+                <h1 class="heading"><span>Seyahatlerimiz</span>
+                    <hr class="hr">
+                </h1>
                 <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper" data-aos="fade-up">
                         <div class='swiper-slide'>
                             <h2>Avrupa Turu</h2>
-                            <img src="images/almanya.jpg" id="zoom">
+                            <img src="images/almanya.jpg" id="zoom" alt="">
                             <a href='portfolio.php'><input type='submit' value='İncele' name='see' class='btn'></a>
                         </div>
                         <div class='swiper-slide'>
                             <h2>Uzak Doğu Turu</h2>
-                            <img src="images/japonya.jpg" id="zoom">
+                            <img src="images/japonya.jpg" id="zoom" alt="">
                             <a href='portfolio.php'><input type='submit' value='İncele' name='see' class='btn'></a>
                         </div>
                         <div class='swiper-slide'>
                             <h2>Mevsim Turları</h2>
-                            <img src="images/fas.jpg" id="zoom">
+                            <img src="images/fas.jpg" id="zoom" alt="">
                             <a href='portfolio.php'><input type='submit' value='İncele' name='see' class='btn'></a>
                         </div>
                         <div class='swiper-slide'>
                             <h2>Amerika Turu</h2>
-                            <img src="images/peru.jpg" id="zoom">
+                            <img src="images/peru.jpg" id="zoom" alt="">
                             <a href='portfolio.php'><input type='submit' value='İncele' name='see' class='btn'></a>
                         </div>
                         <div class='swiper-slide'>
                             <h2>Rusya Turu</h2>
-                            <img src="images/russia.jpg" id="zoom">
+                            <img src="images/russia.jpg" id="zoom" alt="">
                             <a href=""><input type='submit' value='İncele' name='see' class='btn'></a>
                         </div>
                         <div class='swiper-slide'>
                             <h2>Yurt İçi Turları</h2>
-                            <img src="images/istanbul.jpg" id="zoom">
+                            <img src="images/istanbul.jpg" id="zoom" alt="">
                             <a href=""><input type='submit' value='İncele' name='see' class='btn'></a>
                         </div>
                         <div class='swiper-slide'>
                             <h2>Doğu Ekspress Seyahat</h2>
-                            <img src="images/doğu.jpg" id="zoom">
+                            <img src="images/doğu.jpg" id="zoom" alt="">
                             <a href=""><input type='submit' value='İncele' name='see' class='btn'></a>
                         </div>
                         <div class='swiper-slide'>
                             <h2>Avustralya Turu</h2>
-                            <img src="images/sidney.jpg" id="zoom">
+                            <img src="images/sidney.jpg" id="zoom" alt="">
                             <a href=""><input type='submit' value='İncele' name='see' class='btn'></a>
                         </div>
                     </div>
@@ -229,9 +233,9 @@
                 </script>
             </section>
         </div>
-        <section class="back" style="background-image:url(images/avustralia.jpg)" ; no-repeat>
-            <h3 class="heading"><span style="color: white">AVUSTRALYA TURU İÇİN REZERVASYON</span></h3>
-            <div class="sayim">
+        <section class="back">
+            <h3 class="heading"><span>AVUSTRALYA TURU İÇİN REZERVASYON</span></h3>
+            <div class="sayim" data-aos="fade-up">
                 <div>
                     <p id="days">00</p>
                     <span>Gün</span>
@@ -249,7 +253,7 @@
                     <span>Saniye</span>
                 </div>
             </div>
-            <a href="#" class="btn">İncele</a>
+            <a href="#" class="btn" data-aos="fade-up">İncele</a>
             <script>
                 var countDownDate = new Date("July 10, 2023 00:00:00").getTime();
                 var x = setInterval(function() {
@@ -278,48 +282,57 @@
             </script>
         </section>
         <footer>
-            <div class="container">
-                <ul class="ek">
+            <div class="container" data-aos="fade-up">
+                <div class="ek" id="ek">
                     <h3>hazır linkler</h3>
-                    <li><a href="home.php">Ana Sayfa</a></li>
-                    <li><a href="about.php">Hakkımızda</a></li>
-                    <li><a href="travels.php">Seyahatlerimiz</a></li>
-                    <li><a href="contact.php">İletişim</a></li>
-                </ul>
-                <ul class="ek">
+                    <div><a href="home.php">Ana Sayfa</a></div>
+                    <div><a href="about1.php">Hakkımızda</a></div>
+                    <div><a href="travels.php">Seyahatlerimiz</a></div>
+                    <div><a href="contact.php">İletişim</a></div>
+                </div>
+                <div class="ek" id="ek">
                     <h3>Seyahatler</h3>
-                    <li><a href="home.php">Yurt İçi Turlar</a></li>
-                    <li><a href="about.php">Yurt Dışı Turlar</a></li>
-                    <li><a href="travels.php">Mevsim Turları</a></li>
-                    <li><a href="contact.php">Gemi Turları</a></li>
-                </ul>
-                <ul class="ek">
+                    <div><a href="home.php">Yurt İçi Turlar</a></div>
+                    <div><a href="about1.php">Yurt Dışı Turlar</a></div>
+                    <div><a href="travels.php">Mevsim Turları</a></div>
+                    <div><a href="contact.php">Gemi Turları</a></div>
+                </div>
+                <div class="ek" id="ek">
                     <h3>İletişim bilgileri</h3>
-                    <li>
-                        <a href="#"> <i class="fas fa-phone" style="margin: 1rem;"></i>+0213-589-74-10</a>
-                    </li>
-                    <li>
-                        <a href="#" style="text-transform:none;"> <i class="fas fa-envelope" style="margin: 1rem;"></i>asilturizm@gmail.com</a>
-                    </li>
-                </ul>
-                <ul class="social_icon">
+                    <div>
+                        <a href="#"><i class="fas fa-phone"></i>+0213-589-74-10</a>
+                    </div>
+                    <div>
+                        <a href="#" class="lower"><i class="fas fa-envelope"></i>asilturizm@gmail.com</a>
+                    </div>
+                </div>
+                <div class="ek">
                     <h3>Sosyal Medya</h3>
-                    <li>
-                        <a href="#" class="fab fa-facebook-f"></a>
+                    <div class="social_icon">
+                        <div>
+                            <a><i class="fab fa-facebook-f"></i></a>
 
-                        <a href="#" class="fab fa-instagram"></a>
+                            <a><i class="fab fa-instagram"></i></a>
 
-                        <a href="#" class="fab fa-twitter"></a>
+                            <a><i class="fab fa-twitter"></i></a>
 
-                        <a href="#" class="fab fa-youtube"></a>
-                    </li>
-                </ul>
+                            <a><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
 
+                </div>
             </div>
             <hr class="hr">
             <p>Mezuniyet Projesi | 2023</p>
         </footer>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 3000,
+            once: true,
+        });
+    </script>
     <script src="lib/js/jquery.min.js"></script>
     <script src="lib/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
