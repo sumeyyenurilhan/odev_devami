@@ -1,22 +1,3 @@
-<?php
-    include("yonetim/ayar.php");
-
-    if(isset($_POST['send'])){
-        $name = mysqli_real_escape_string($baglan, $_POST['name']);
-        $email = mysqli_real_escape_string($baglan, $_POST['email']);
-        $number = mysqli_real_escape_string($baglan, $_POST['number']);
-        $msg = mysqli_real_escape_string($baglan, $_POST['message']);
-
-        $select_message = mysqli_query($baglan, "SELECT * FROM `contact_form` WHERE name = '$name' AND email = '$email' AND number = '$number' AND message = '$msg'") or die('query failed');
-
-        if(mysqli_num_rows($select_message) > 0){
-            $message[] = 'mesaj gönderiliyor!';
-        }else{
-            mysqli_query($baglan, "INSERT INTO `contact_form`(name, email, number, message) VALUES('$name','$email','$number','$msg')") or die('query failed');
-            $message[] = 'mesaj başarıyla gönderildi!';
-        }
-    }
-?>
 <!DOCTYPE html>
 <html lang="tr">
 
@@ -38,14 +19,13 @@
     <div class="hero">
         <header class="header">
             <nav class="nav">
-                <a href="home.php" aria-label="home"><img src="images/logo.png" class="logo" alt=""></a>
+                <a href="home.html" aria-label="home"><img src="images/logo.png" class="logo" alt=""></a>
                 <ul>
-                    <li><a href="home.php">Ana Sayfa</a></li>
-                    <li><a href="about1.php">Hakkımızda</a></li>
-                    <li><a href="travels.php">Seyahatler</a></li>
-                    <li><a href="contact.php" class="active">İletişim</a></li>
+                    <li><a href="home.html">Ana Sayfa</a></li>
+                    <li><a href="about1.html">Hakkımızda</a></li>
+                    <li><a href="travels.html">Seyahatler</a></li>
+                    <li><a href="contact.html" class="active">İletişim</a></li>
                 </ul>
-                <a><img src="images/bar.png" class="bar"></a>
                 <img src="images/moon.png" id="icon" alt="">
             </nav>
             <script>
@@ -77,18 +57,6 @@
                         <input type="submit" value="mesajı gönder" name="send" class="btn1">
                     </form>
                 </section>
-            <?php
-            if(isset($message)){
-                foreach($message as $message){
-                echo'
-                <div class="message">
-                    <span>'.$message.'</span>
-                    <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
-                </div>
-                ';
-                }
-            }
-            ?>
             </div>
         </div>
         <footer>
@@ -96,16 +64,16 @@
                 <div class="ek" id="ek">
                     <h3>hazır linkler</h3>
                     <div><a href="home.php">Ana Sayfa</a></div>
-                    <div><a href="about1.php">Hakkımızda</a></div>
+                    <div><a href="about.php">Hakkımızda</a></div>
                     <div><a href="travels.php">Seyahatlerimiz</a></div>
                     <div><a href="contact.php">İletişim</a></div>
                 </div>
                 <div class="ek" id="ek">
                     <h3>Seyahatler</h3>
-                    <div><a href="travels.php">Yurt İçi Turlar</a></div>
-                    <div><a href="travels.php">Yurt Dışı Turlar</a></div>
+                    <div><a href="home.php">Yurt İçi Turlar</a></div>
+                    <div><a href="about.php">Yurt Dışı Turlar</a></div>
                     <div><a href="travels.php">Mevsim Turları</a></div>
-                    <div><a href="travels.php">Gemi Turları</a></div>
+                    <div><a href="contact.php">Gemi Turları</a></div>
                 </div>
                 <div class="ek" id="ek">
                     <h3>İletişim bilgileri</h3>
