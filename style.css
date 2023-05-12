@@ -111,10 +111,7 @@ nav ul li a.active {
     cursor: pointer;
     width: 3rem;
 }
-.bar{
-    display: none;
-    position:relative;
-}
+
 .home {
     position: relative;
     width: 100%;
@@ -131,12 +128,12 @@ nav ul li a.active {
 }
 
 .home .home-box .content {
-    z-index: 999;
+    z-index: 888;
     color: white;
     width: 70%;
     margin: 35rem 17rem;
     display: none;
-    position: absolute;
+    position: relative;
     align-items: center;
 }
 
@@ -360,18 +357,26 @@ nav ul li a.active {
 .works {
     margin-top: 7rem;
 }
+
 .works .swiper {
     width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
     height: 50rem;
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-left-color: var(--border-bold);
+    border-right-color: var(--border-bold);
 }
 
 .works .swipper .swiper-wrapper {
     display: block;
-    height: 30rem;
+    height: 20rem;
+    width: 40rem;
 }
 
 .works .swiper .swiper-slide {
@@ -381,7 +386,7 @@ nav ul li a.active {
 
 .works .swiper .swiper-slide h2 {
     color: var(--border-bold);
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin: 2rem;
 }
 
@@ -389,8 +394,11 @@ nav ul li a.active {
     width: 100%;
     height: 30rem;
     object-fit: cover;
-    border: var(--border-bold);
+    border: #00262a;
+    border-width: medium;
+    border-style: solid;
 }
+
 .works .swiper .swiper-slide img #id {
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -455,10 +463,6 @@ nav ul li a.active {
 .back a {
     text-align: center;
     align-items: center;
-}
-
-.lower {
-    text-transform: lowercase;
 }
 
 footer {
@@ -716,28 +720,6 @@ footer p {
     resize: none;
 }
 
-.message {
-    width: 30rem;
-    font-size: 1.75rem;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.25rem 1.25rem;
-    background-color: var(--border-light);
-    height: 3rem;
-    margin: 2rem;
-    margin-left: 44rem;
-}
-
-.message span {
-    color: var(--border-bg);
-}
-
-.message i {
-    cursor: pointer;
-    color: var(--border-bg);
-    margin-top: 0.50rem;
-}
-
 .high2 {
     width: 100%;
     height: 100%;
@@ -749,13 +731,69 @@ footer p {
     background-attachment: fixed;
 }
 
+.class1 .find {
+    margin-top: 12rem;
+    margin-bottom: 3rem;
+    border-style: none;
+    height: 4rem;
+    width: 30rem;
+    align-self: center;
+    display: flex;
+    margin-left: 45rem;
+}
+
+.class1 .find form {
+    background: #00262ac2;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.class1 .find form:hover {
+    background-color: var(--border-light);
+}
+
+.class1 .find form input {
+    background: none;
+    background-color: none;
+    color: var(--border-bg);
+    border: none;
+    height: 3rem;
+    width: 20rem;
+    font-size: 1.5rem;
+    margin: 0.30rem;
+    margin-left: 2rem;
+}
+
+.class1 .find form input::-webkit-input-placeholder {
+    color: white;
+}
+
+.class1 .find a {
+    background: #00262ac2;
+    width: 5rem;
+    width: 4rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.class1 .find a:hover {
+    background-color: var(--secondary-color);
+}
+
+.class1 .find a i {
+    color: var(--border-bg);
+    font-size: 2rem;
+    margin-top: 0.75rem;
+    margin-left: 0.5rem;
+    display: block;
+}
+
 .travels {
     align-items: center;
     justify-content: center;
     width: 70%;
-    min-height: 30rem;
-    margin-top: 15rem;
-    margin-bottom: 6rem;
+    min-height: 52rem;
+    margin-bottom: 5rem;
     background: #00262ac2;
     position: center;
     margin-left: 18rem;
@@ -768,12 +806,10 @@ footer p {
     grid-template-columns: auto auto auto;
     gap: 3rem;
     padding: 2rem;
-    justify-content: space-between;
 }
 
 .travels .container .travel {
-    min-height: 42rem;
-    max-width: 30rem;
+    min-height: 38rem;
     border-bottom: var(--border-light);
     border-style: solid;
     border-width: medium;
@@ -784,13 +820,12 @@ footer p {
     align-items: center;
     justify-content: center;
     position: center;
-    padding-bottom: 3rem;
 }
 
 .travels .container .travel h2 {
     display: block;
     font-size: 2.20rem;
-    color: var(--light-bg);
+    color: var(--border-bg);
     text-align: center;
     min-height: 7rem;
 }
@@ -805,378 +840,7 @@ footer p {
     margin-left: 0.75rem;
 }
 
-.travels .container .travel p {
-    font-size: 1rem;
-    color: white;
-    margin: 1rem;
-    text-align: justify;
-}
-
 .travels .container .travel a {
     align-items: center;
     margin-left: 6.75rem;
-}
-
-.ekler {
-    align-items: center;
-    justify-content: center;
-    width: 70%;
-    min-height: 50rem;
-    margin-top: 12rem;
-    margin-bottom: 3rem;
-    background: #00262ac2;
-    position: center;
-    margin-left: 18rem;
-    --webkit-backdrop-filter: blur(10rem);
-    --backdrop-filter: blur(10rem);
-}
-
-.ekler .container {
-    display: grid;
-    grid-template-columns: 23rem auto;
-    padding: 3rem;
-}
-
-.ekler .container .image {
-    align-items: center;
-    border: var(--border-bg);
-    height: 100%;
-    border-right: solid;
-    border-bottom: none;
-    border-left: none;
-    border-top: none;
-    align-items: center;
-    justify-content: center;
-}
-
-.ekler .container .image img {
-    height: 20rem;
-    width: 20rem;
-}
-
-.ekler .container .contents {
-    padding: 2rem;
-}
-
-.ekler .container .contents h2 {
-    color: var(--light-bg);
-    font-size: 2rem;
-}
-
-.ekler .container .contents p {
-    font-size: 1rem;
-    color: white;
-    margin: 1rem;
-    text-align: justify;
-}
-
-
-@media (max-width:1400px) {
-    .hero {
-        min-height: 150vh;
-    }
-    
-    .hero header nav {
-        padding: 4rem 4rem;
-    }
-    .hero .header .logo {
-        width: 10rem;
-    }
-    nav ul li {
-        padding: 0rem 2rem;
-        font-size: 1.25rem;
-    }
-    
-    nav ul li a::before {
-        height: 3px;
-    }
-    #icon {
-        width: 2rem;
-    }
-    
-    .home .home-box .content {
-        margin: 32rem 12rem;
-    }
-    
-    .home .content a {
-        font-size: 1.5rem;
-    }
-    
-    .home .slider-navigation {
-        padding-left: 40.25rem;
-    }
-    .seasons {
-        margin-top: 6rem;
-        width: 100%;
-    }
-    
-    .seasons .season .season-box {
-        width: 20rem;
-    }
-    
-    .seasons .season .season-box h2 {
-        font-size: 2rem;
-    }
-    
-    .seasons .season .season-box img {
-        width: 17rem;
-        height: 17rem;
-    }
-    
-    .works .swiper .swiper-slide h2 {
-        font-size: 1.15rem;
-    }
-    
-    footer .container h3,
-    footer .container .ek h3 {
-        font-size: 2rem;
-    }
-    
-    footer .container div a i {
-        padding: 1rem;
-    }
-    
-    .about {
-        width: 85%;
-        margin-left: 6rem;
-    }
-    .contact {
-        width: 50%;
-        margin-left: 22rem;
-    }
-    
-    .contact form .btn1 {
-        margin-left: 14rem;
-    }
-    .travels {
-        width: 92%;
-        margin-left: 3rem;
-    }
-
-    .ekler {
-        width: 80%;
-        margin-left: 8rem;
-    }
-    
-}
-
-@media (max-width:650px) {
-    .hero {
-        min-height: 250vh;
-    }
-    .hero header nav {
-        padding: 3rem 4rem;
-    }
-    .bar:hover nav ul{
-        display: block;
-        position: absolute;
-    }   
-    nav ul li {
-        display: inline-block;
-        list-style: none;
-        padding: 0rem 1rem;
-        font-size: 1.25rem;
-        position: relative;
-        display: none;
-    }
-
-    nav ul li a::before {
-        content: '';
-        position: absolute;
-        background: var(--border-bold);
-        width: 0;
-        height: 3px;
-        bottom: 0;
-        left: 0;
-        transition: 0.3s ease;
-    }
-
-    nav ul li a {
-        text-decoration: none;
-        color: var(--secondary-color);
-        transition: 0.3s ease;
-    }
-
-    nav ul li a:hover::before {
-        width: 100%;
-        padding-bottom: 1px;
-    }
-    .bar{
-        display: block;
-        width: 1.5rem;
-        height: 1.5rem;
-        position: absolute;
-        margin-bottom: 5rem;
-    }
-    .bar:hover nav ul li{
-        display: block;
-    }
-    .home .home-box .content {
-        margin: 28rem 5.5rem;
-    }
-    .home .content h1{
-        font-size: 2rem;
-    }
-    .home .content p{
-        font-size: 0.75rem;
-        margin-bottom: 1rem;
-    }
-    .home .content a {
-        font-size: 1.5rem;
-    }
-    
-    .home .slider-navigation {
-        padding-left: 17.5rem;
-    }
-    .seasons {
-        margin-top: 6rem;
-        min-height: 100rem;
-    }
-    
-    .seasons .seasons-box {
-        margin-top: 3rem;
-        display: grid;
-        grid-template-rows: minmax(15rem,1fr);
-    }
-    
-    .seasons .season .season-box {
-        width: 20rem;
-        margin-left: 3.5rem;
-        margin-bottom: 2rem;
-    }
-    
-    .seasons .season .season-box h2 {
-        font-size: 2rem;
-    }
-    
-    .seasons .season .season-box img {
-        width: 20rem;
-        height: 20rem;
-    }
-    .heading span {
-        font-size: 2rem;
-    }
-    
-    .news .container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
-    }
-    
-    .news .container .box {
-        margin-left: 5rem;
-    }
-    
-    .news .container .box h3 {
-        margin: 0.5rem 1rem;
-        font-size: 2rem;
-        color: var(--primary-color);
-    }
-    
-    .works {
-        margin-top: 7rem;
-    }
-    .works .swiper {
-        height: 35rem;
-        display: grid;
-        grid-template-columns: minmax(30rem,1fr);
-    }
-
-    .works .swipper .swiper-wrapper {
-        display: block;
-        min-height: 20rem;
-    }
-
-    .works .swiper .swiper-slide {
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
-    .works .swiper .swiper-slide h2 {
-        font-size: 1rem;
-        margin: 0.20rem;
-    }
-
-    .works .swiper .swiper-slide img {
-        width: 100%;
-        height: 20rem;
-        margin-top: 2rem;
-    }
-        
-    .back {
-        height: 40rem;
-        grid-template-rows: repeat(auto-fit, minmax(5rem, 1fr));
-        margin-top: 2rem;
-        margin-bottom: 4rem;
-    }
-    
-    .back .btn {
-        padding: 1rem 1rem;
-        font-size: 1rem;
-    }
-    
-    .sayim div {
-        flex-basis: 15rem;
-    }
-    
-    .sayim div p {
-        font-size: 2rem;
-        margin: 1rem;
-    }
-    footer .container {
-        display: block;
-        flex-direction: row;
-    }
-    
-    footer .container h3,
-    footer .container .ek h3 {
-        font-size: 3rem;
-    }
-    .about {
-        display: block;
-        width: 85%;
-        margin-left: 3rem;
-    }
-    .about .article {
-        width: 82%;
-        margin-top: 5rem;
-        padding-top: 2rem;
-    }
-    .b{
-        display: none;
-    }
-    .about .article1 {
-        margin: 2rem;
-        margin-bottom: 5rem;
-        padding-bottom: 2rem;
-    }
-    .contact {
-        width: 85%;
-        margin-left: 3rem;
-    }
-    
-    .contact form .btn1 {
-        margin-left: 8rem;
-    }
-    .travels {
-        width: 70%;
-        margin-left: 6rem;
-    }
-
-    .travels .container {
-        display: grid;
-        grid-template-columns: auto;
-    }
-    .ekler {
-        width: 80%;
-        margin-left: 4rem;
-    }
-
-    .ekler .container {
-        display: block;
-    }
-
-    .ekler .container .image {
-        border-right: none;
-        padding-left: 3rem;
-    }
 }
