@@ -1,8 +1,3 @@
-<?php
-    include("yonetim/ayar.php");
-    error_reporting(0);
-    session_start();
-?>
 <!DOCTYPE html>
 <html lang="tr">
 
@@ -24,15 +19,13 @@
     <div class="hero">
         <header class="header">
             <nav class="nav">
-                <a href="home.php" aria-label="home"><img src="images/logo.png" class="logo" alt=""></a>
-                
+                <a href="home.html" aria-label="home"><img src="images/logo.png" class="logo" alt=""></a>
                 <ul>
-                    <li><a href="home.php" class="active">Ana Sayfa</a></li>
-                    <li><a href="about1.php">Hakkımızda</a></li>
-                    <li><a href="travels.php">Seyahatler</a></li>
-                    <li><a href="contact.php">İletişim</a></li>
+                    <li><a href="home.html" class="active">Ana Sayfa</a></li>
+                    <li><a href="about1.html">Hakkımızda</a></li>
+                    <li><a href="travels.html">Seyahatler</a></li>
+                    <li><a href="contact.html">İletişim</a></li>
                 </ul>
-                <a><img src="images/bar.png" class="bar"></a>
                 <img src="images/moon.png" id="icon" alt="">
             </nav>
             <script>
@@ -48,20 +41,20 @@
             </script>
             <div class="home">
                 <div class="home-box">
-                <video src="images/tacmahal.mp4" muted autoplay loop class="slider active"></video>
-                <img src="images/gemi.jpg" class="slider" alt="">
-                <video src="images/ucak.mp4" muted autoplay loop class="slider"></video>
+                    <video src="images/tacmahal.mp4" muted autoplay loop class="slider active"></video>
+                    <img src="images/gemi.jpg" class="slider" alt="">
+                    <video src="images/ucak.mp4" muted autoplay loop class="slider"></video>
                     <div class="content active" data-aos="fade-up">
-                        <h1>Hindistan Ziyaretimiz Yakında</h1>
+                        <h1>Hindistan Ziyaretimiz Yakında...</h1>
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
                             to using 'Content here, content here', making it look like readable English.</p>
-                        <a href="travels.php" class="btn">İncele</a>
+                        <a href="#" class="btn">İncele</a>
                     </div>
                     <div class="content" data-aos="fade-up">
                         <h1>Okyanus Seyahatlerimiz</h1>
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
                             to using 'Content here, content here', making it look like readable English.</p>
-                        <a href="travels.php" class="btn">İncele</a>
+                        <a href="#" class="btn">İncele</a>
                     </div>
                     <div class="content" data-aos="fade-up">
                         <h1>Kaliteli Ulaşım Hizmeti</h1>
@@ -110,21 +103,21 @@
                         <div class="season-box">
                             <h2>Yaz Turları</h2>
                             <img src="images/fas.jpg" alt="">
-                            <a href="travels.php"><input type='submit' value='İncele' name='see' class='btn'></a>
+                            <a href=""><input type='submit' value='İncele' name='see' class='btn'></a>
                         </div>
                     </div>
                     <div class="season">
                         <div class="season-box">
                             <h2>Bahar Turları</h2>
                             <img src="images/cinbaharı.jpg" alt="">
-                            <a href="travels.php"><input type='submit' value='İncele' name='see' class='btn'></a>
+                            <a href=""><input type='submit' value='İncele' name='see' class='btn'></a>
                         </div>
                     </div>
                     <div class="season">
                         <div class="season-box">
                             <h2>Kış Turları</h2>
                             <img src="images/norvec.jpg" alt="">
-                            <a href="travels.php"><input type='submit' value='İncele' name='see' class='btn'></a>
+                            <a href=""><input type='submit' value='İncele' name='see' class='btn'></a>
                         </div>
                     </div>
                 </div>
@@ -134,17 +127,36 @@
                     <hr class="hr">
                 </h1>
                 <div class="container" data-aos="fade-up">
-                <?php
-                    $sorgu = $baglan->query("select * from anasayfa_gezig");
-                    while ($satir = $sorgu->fetch_object()) {
-                    $resim = substr($satir->resim,3);
-                    echo "
-                    <div class='box'>
-                        <img class='icon' src='$resim' alt=''>
-                        <h3>$satir->baslik</h3>
-                        <p>$satir->yazi</p>
-                    </div>";
-                }?>
+                    <div class="box">
+                        <img class="icon" src="images/norveç.jpg" alt="">
+                        <h3>Norveç Turumuz</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis sodales ex.</p>
+                    </div>
+                    <div class="box">
+                        <img class="icon" src="images/uludag.jpg" alt="">
+                        <h3>Uludağ'da Kestane</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis sodales ex.</p>
+                    </div>
+                    <div class="box">
+                        <img class="icon" src="images/safar.jpg" alt="">
+                        <h3>Safari'deki Maceralarımız</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis sodales ex.</p>
+                    </div>
+                    <div class="box">
+                        <img class="icon" src="images/kapadokya.jpg" alt="">
+                        <h3>Kapadokya Seyahati</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis sodales ex.</p>
+                    </div>
+                    <div class="box">
+                        <img class="icon" src="images/cay.jpg" alt="">
+                        <h3>Karadeniz'de Çay Keyfi</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis sodales ex.</p>
+                    </div>
+                    <div class="box">
+                        <img class="icon" src="images/niagara.jpg" alt="">
+                        <h3>Niagara Şelalesi</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis sodales ex.</p>
+                    </div>
                 </div>
             </section><br><br>
             <section class="works">
@@ -153,16 +165,46 @@
                 </h1>
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper" data-aos="fade-up">
-                    <?php
-                        $sorgu = $baglan->query("select * from anasayfa_slider");
-                        while ($satir = $sorgu->fetch_object()) {
-                        $resim = substr($satir->resim,3);
-                        echo "
                         <div class='swiper-slide'>
-                            <h2>$satir->baslik</h2>
-                            <img src='$resim' id='zoom'>
-                            <a href='travels.php'><input type='submit' value='İncele' name='see' class='btn'></a>
-                        </div>";}?>
+                            <h2>Avrupa Turu</h2>
+                            <img src="images/almanya.jpg" id="zoom" alt="">
+                            <a href='portfolio.php'><input type='submit' value='İncele' name='see' class='btn'></a>
+                        </div>
+                        <div class='swiper-slide'>
+                            <h2>Uzak Doğu Turu</h2>
+                            <img src="images/japonya.jpg" id="zoom" alt="">
+                            <a href='portfolio.php'><input type='submit' value='İncele' name='see' class='btn'></a>
+                        </div>
+                        <div class='swiper-slide'>
+                            <h2>Mevsim Turları</h2>
+                            <img src="images/fas.jpg" id="zoom" alt="">
+                            <a href='portfolio.php'><input type='submit' value='İncele' name='see' class='btn'></a>
+                        </div>
+                        <div class='swiper-slide'>
+                            <h2>Amerika Turu</h2>
+                            <img src="images/peru.jpg" id="zoom" alt="">
+                            <a href='portfolio.php'><input type='submit' value='İncele' name='see' class='btn'></a>
+                        </div>
+                        <div class='swiper-slide'>
+                            <h2>Rusya Turu</h2>
+                            <img src="images/russia.jpg" id="zoom" alt="">
+                            <a href=""><input type='submit' value='İncele' name='see' class='btn'></a>
+                        </div>
+                        <div class='swiper-slide'>
+                            <h2>Yurt İçi Turları</h2>
+                            <img src="images/istanbul.jpg" id="zoom" alt="">
+                            <a href=""><input type='submit' value='İncele' name='see' class='btn'></a>
+                        </div>
+                        <div class='swiper-slide'>
+                            <h2>Doğu Ekspress Seyahat</h2>
+                            <img src="images/doğu.jpg" id="zoom" alt="">
+                            <a href=""><input type='submit' value='İncele' name='see' class='btn'></a>
+                        </div>
+                        <div class='swiper-slide'>
+                            <h2>Avustralya Turu</h2>
+                            <img src="images/sidney.jpg" id="zoom" alt="">
+                            <a href=""><input type='submit' value='İncele' name='see' class='btn'></a>
+                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -211,7 +253,7 @@
                     <span>Saniye</span>
                 </div>
             </div>
-            <a href="travels/ek4.php" class="btn" data-aos="fade-up">İncele</a>
+            <a href="#" class="btn" data-aos="fade-up">İncele</a>
             <script>
                 var countDownDate = new Date("July 10, 2023 00:00:00").getTime();
                 var x = setInterval(function() {
@@ -250,10 +292,10 @@
                 </div>
                 <div class="ek" id="ek">
                     <h3>Seyahatler</h3>
-                    <div><a href="travels.php">Yurt İçi Turlar</a></div>
-                    <div><a href="travels.php">Yurt Dışı Turlar</a></div>
+                    <div><a href="home.php">Yurt İçi Turlar</a></div>
+                    <div><a href="about1.php">Yurt Dışı Turlar</a></div>
                     <div><a href="travels.php">Mevsim Turları</a></div>
-                    <div><a href="travels.php">Gemi Turları</a></div>
+                    <div><a href="contact.php">Gemi Turları</a></div>
                 </div>
                 <div class="ek" id="ek">
                     <h3>İletişim bilgileri</h3>

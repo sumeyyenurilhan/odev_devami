@@ -51,7 +51,7 @@
         </div>
         <br><hr><br>
         <div style="text-align:center;">
-            <a href="anasayfa_kayanp.php">Kayan Pencereler</a><a href="anasayfa_gezig.php">Gezi Günlüğü</a><a href="anasayfa_slider.php">Seyahatler Linkleri</a>
+            <a href="anasayfa_gezig.php">Gezi Günlüğü</a><a href="anasayfa_slider.php">Seyahatler Linkleri</a>
         </div>
         <h3>MENÜDEN SEÇİM YAPINIZ</h3>
         <br><hr><br>
