@@ -1,6 +1,3 @@
-<?php
-    include("yonetim/ayar.php");
-?>
 <!DOCTYPE html>
 <html lang="tr">
 
@@ -22,14 +19,13 @@
     <div class="hero">
         <header class="header">
             <nav class="nav">
-                <a href="home.php" aria-label="home"><img src="images/logo.png" class="logo" alt=""></a>
+                <a href="home.html" aria-label="home"><img src="images/logo.png" class="logo" alt=""></a>
                 <ul>
-                    <li><a href="home.php">Ana Sayfa</a></li>
-                    <li><a href="about1.php" class="active">Hakkımızda</a></li>
-                    <li><a href="travels.php">Seyahatler</a></li>
-                    <li><a href="contact.php">İletişim</a></li>
+                    <li><a href="home.html">Ana Sayfa</a></li>
+                    <li><a href="about1.html" class="active">Hakkımızda</a></li>
+                    <li><a href="travels.html">Seyahatler</a></li>
+                    <li><a href="contact.html">İletişim</a></li>
                 </ul>
-                <a><img src="images/bar.png" class="bar"></a>
                 <img src="images/moon.png" id="icon" alt="">
             </nav>
             <script>
@@ -48,19 +44,22 @@
             <div class="class1">
                 <section class="about" id="about" data-aos="fade-up">
                     <div class="article">
-                        <hr class="b">
-                        <div><a href="about1.php" class="active">Vizyon ve Misyonumuz</a></div>
-                        <div><a href="about2.php">Seyahat Rehberi</a></div>
-                        <div><a href="about3.php">Gereklilikler</a></div>
+                        <hr>
+                        <div><a href="about1.html">Vizyon ve Misyonumuz</a></div>
+                        <div><a href="about2.html" class="active">Seyahat Rehberi</a></div>
+                        <div><a href="about3.html">Gereklilikler</a></div>
                         <hr>
                     </div>
                     <div class="article1">
-                        <h3 class="heading"><span>Vizyon ve Misyonumuz</span> </h3>
-                        <p><?php
-                        $sorgu = $baglan->query("select * from hakkimizda1");
-                        $satir = $sorgu->fetch_object();
-                        echo "$satir->aciklama";
-                        ?></p>
+                        <h3 class="heading"><span>Seyahat Rehberi</span></h3>
+                        <p>The Lorem ipum filling text is used by graphic designers, programmers and printers with the aim of occupying the spaces of a website, an advertising product or an editorial production whose final text is not yet ready. This expedient
+                            serves to get an idea of the finished product that will soon be printed or disseminated via digital channels. In order to have a result that is more in keeping with the final result, the graphic designers, designers or typographers
+                            report the Lorem ipsum text in respect of two fundamental aspects, namely readability and editorial requirements. The choice of font and font size with which Lorem ipsum is reproduced answers to specific needs that go beyond
+                            the simple and simple filling of spaces dedicated to accepting real texts and allowing to have hands an advertising/publishing product, both web and paper, true to reality.<br> Its nonsense allows the eye to focus only on the
+                            graphic layout objectively evaluating the stylistic choices of a project, so it is installed on many graphic programs on many software platforms of personal publishing and content management system. The Lorem ipum filling text
+                            is used by graphic designers, programmers and printers with the aim of occupying the spaces of a website, an advertising product or an editorial production whose final text is not yet ready. This expedient serves to get an
+                            idea of the finished product that will soon be printed or disseminated via digital channels. In order to have a result that is more in keeping with the final result, the graphic designers, designers or typographers report the
+                            Lorem ipsum text in respect of two fundamental aspects, namely readability and editorial requirements.</p>
                     </div>
                 </section>
             </div>
@@ -76,10 +75,10 @@
                 </div>
                 <div class="ek" id="ek">
                     <h3>Seyahatler</h3>
-                    <div><a href="travels.php">Yurt İçi Turlar</a></div>
-                    <div><a href="travels.php">Yurt Dışı Turlar</a></div>
+                    <div><a href="home.php">Yurt İçi Turlar</a></div>
+                    <div><a href="about.php">Yurt Dışı Turlar</a></div>
                     <div><a href="travels.php">Mevsim Turları</a></div>
-                    <div><a href="travels.php">Gemi Turları</a></div>
+                    <div><a href="contact.php">Gemi Turları</a></div>
                 </div>
                 <div class="ek" id="ek">
                     <h3>İletişim bilgileri</h3>
